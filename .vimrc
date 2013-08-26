@@ -19,8 +19,9 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-ragtag'
 
 " colorschemes
-Bundle "tristen/superman.git"
+Bundle 'tristen/superman.git'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'endel/vim-github-colorscheme'
 
 " vim-scripts repos
 Bundle 'L9'
@@ -90,13 +91,17 @@ Bundle "git://github.com/tsaleh/vim-matchit.git"
   Bundle "scrooloose/syntastic.git"
   let g:syntastic_quiet_warnings=0
 
+" ZoomWin to fullscreen a particular buffer without losing others
+  Bundle "vim-scripts/ZoomWin.git"
+  map <Leader>z :ZoomWin<CR>
+
 "" TODO "" SPLIT THIS UP INTO SPERATE FILES DUDE!
 "" GENERAL CONFIG
 
     syntax enable
 
     if has('gui_macvim') && has('gui_running')
-      colorscheme superman
+      colorscheme github
       set guifont=Inconsolata\ for\ Powerline:h14
       " use gui tabs
       set guioptions+=e
@@ -112,7 +117,6 @@ Bundle "git://github.com/tsaleh/vim-matchit.git"
       set mouse=a   " Mouse support
       set t_Co=256
     endif
-
 
     filetype plugin indent on     " required!
 
